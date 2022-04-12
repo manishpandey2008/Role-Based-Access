@@ -1,0 +1,62 @@
+[
+  {
+    "data": {
+      "name": "globalIndicators",
+      "url" : "/gi",
+      "accessBy":["ADMIN","MANAGER"],
+      "children":{
+        "accessType": {
+          "read": {"access":["ADMIN","MANAGER"] , "url": "/gi","method" : "get"},
+          "create": {"access":["ADMIN","MANAGER"] , "url": "/gi","method" : "post"},
+          "edit": {"access":["ADMIN","MANAGER"] , "url": "/gi/","method" : "post"},
+          "delete": {"access":["ADMIN"] , "url": "","method" : "delete"}
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "name": "pop",
+      "url" : "/pop",
+      "accessBy":["ADMIN","MANAGER","FARMER"],
+      "children":{
+        "accessType": {
+          "read": {"access":["ADMIN","MANAGER","FARMER"] , "url": "/pop","method" : "get"},
+          "create": {"access":["ADMIN","MANAGER"] , "url": "/pop","method" : "post"},
+          "edit": {"access":["ADMIN","MANAGER"] , "url": "/pop/","method" : "post"},
+          "delete": {"access":["ADMIN"] , "url": "","method" : "delete"}
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "name": "admin",
+      "url" : "/admin",
+      "accessBy":["ADMIN"],
+      "children":{
+        "accessType": {
+          "read": {"access":["ADMIN"] , "url": "/admin","method" : "get"},
+          "create": {"access":["ADMIN"] , "url": "/admin","method" : "post"},
+          "edit": {"access":["ADMIN"] , "url": "/admin/","method" : "post"},
+          "delete": {"access":["ADMIN"] , "url": "","method" : "delete"}
+        }
+      }
+    }
+  },
+  {
+    "data": {
+      "name": "user",
+      "url" : "/user",
+      "accessBy":["ADMIN","MANAGER"],
+      "children":{
+        "accessType": {
+          "read": {"access":["ADMIN","MANAGER"] , "url": "/user","method" : "get"},
+          "create": {"access":["ADMIN","MANAGER"] , "url": "/user","method" : "post"},
+          "edit": {"access":["ADMIN","MANAGER"] , "url": "/user/","method" : "post"},
+          "delete": {"access":["ADMIN"] , "url": "","method" : "delete"}
+        }
+      }
+    }
+  }
+]

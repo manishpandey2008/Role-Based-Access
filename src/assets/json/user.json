@@ -1,0 +1,26 @@
+[
+  {
+    "name":"Balmukund Pandey",
+    "username":"balmukund@123",
+    "password":"password",
+    "roles":["ADMIN","MANAGER"]
+  },
+  {
+    "name":"Manish Pandey",
+    "username":"manish@123",
+    "password":"password",
+    "roles":["MANAGER"]
+  },
+  {
+    "name":"Avinash Pandey",
+    "username":"avinash@123",
+    "password":"password",
+    "roles":["FARMER"]
+  },
+  {
+    "name":"Akhil Pandey",
+    "username":"akhil@123",
+    "password":"password",
+    "roles":["FARMER"]
+  }
+]

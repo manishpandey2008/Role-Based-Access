@@ -1,0 +1,23 @@
+<div class="grid grid-cols-3 gap-4">
+  <div class="w-full bg-white rounded-t-md cursor-pointer" *ngFor="let user of allUsers">
+    <div class="p-4 mt-4">
+      <div class="flex justify-between items-center">
+        <div class="w-full text-center -mt-5 text-gray-600">
+          <span class="text-lg font-bold">{{user.name}}</span>
+          <span class="block font-semibold">{{user.roles}}</span>
+          <div class="mt-2 flex justify-between items-center px-14">
+            <span (click)="editUser()" class="px-4 py-1 bg-green-200 text-green-900 text-sm rounded-sm font-medium">
+              Edit
+            </span>
+            <span (click)="deleteUser()" class="px-4 py-1 bg-red-200 text-red-900 text-sm rounded-sm font-medium">
+              Delete
+            </span>
+            <span (click)="view()" class="px-4 py-1 bg-yellow-200 text-yellow-900 text-sm rounded-sm font-medium">
+              View
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
