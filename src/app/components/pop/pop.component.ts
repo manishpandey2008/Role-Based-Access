@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Status } from 'src/app/model/status';
 import { AccessService } from 'src/app/service/access.service';
+import { MessageService } from 'src/app/service/message.service';
 
 @Component({
   selector: 'app-pop',
@@ -8,7 +10,7 @@ import { AccessService } from 'src/app/service/access.service';
 })
 export class PopComponent implements OnInit {
 
-  constructor(private access:AccessService) { }
+  constructor(private access:AccessService,private message:MessageService) { }
 
   ngOnInit(): void {
     this.access.getAuthorization("pop")
@@ -16,26 +18,26 @@ export class PopComponent implements OnInit {
 
   editPop(){
     if(this.access.routeAccessClaim("edit")){
-      alert("✅ Item edit succesfully !!");
+      this.message.veiwMessage("✅ This Data edited succesfully",Status.SUCCESS)
     }else{
-      alert("🚫 You are not authorized to edit this");
+      this.message.veiwMessage("🚫 Sorry,You are not authorized to edit Data",Status.WARNING)
     }
   }
 
   deletePop(){
     if(this.access.routeAccessClaim("delete")){
-    alert("✅ Item deleted succesfully !!");
+      this.message.veiwMessage("✅ This data deleted succesfully",Status.SUCCESS)
     }else{
-      alert("🚫 You are not authorized to delete this");
+      this.message.veiwMessage("🚫 Sorry,You are not authorized to delete data",Status.WARNING)
     }
   }
 
   view(){
     if(this.access.routeAccessClaim("read")){
-      alert("✅ Item open in read formate succesfully !!");
-      }else{
-        alert("🚫 You are not authorized to read this");
-      }
+      this.message.veiwMessage("✅ View data open succesfully",Status.SUCCESS)
+    }else{
+      this.message.veiwMessage("🚫 Sorry,You are not authorized to read Data",Status.WARNING)
+    }
   }
 
 }
